@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!--头部-->
+    <header>
+      <div class="logo">
+        <a href="#"><img src="images/header_logo.png" alt=""></a>
+      </div>
+      <div class="downl">
+        <a href="#"><img src="images/header_app.png" alt=""></a>
+      </div>
+    </header>
+
+    <!--搜索-->
+    
+      <form class="search">
+        <input type="button" value="搜索">
+        <input type="search" placeholder="请输入你想比价的商品">
+      </form>
+
+   <!--导航-->
+     <nav>
+       <ul class="row">
+         <!--<li>-->
+           <!--<a href="">-->
+             <!--<img src="images/ic_search.png" alt="">-->
+             <!--<p>比价搜索</p>-->
+           <!--</a>-->
+         <!--</li>-->
+       </ul>
+     </nav>
+    <!--导航模板-->
+    <script type="text/template" id="tplNav">
+        {{each result}}
+         <li id="{{$value.indexmenuId}}">
+           <a href="{{$value.titlehref}}">
+             {{# $value.img}}
+             <p>{{$value.name}}</p>
+           </a>
+         </li>
+        {{/each}}
+    </script>
+    
+    <!--超值折扣-->
+     <div class="dis">
+       <div class="dis-header">
+         <p>超值折扣推荐</p>
+         <a href=""><img src="images/more.png" alt=""></a>
+       </div>
+       <ul class="recom">
+         <!--<li>-->
+           <!--<a href=""><img src="images/product.jpg" alt=""></a>-->
+           <!--<p>士大夫阿萨德发送打法大大声打法阿士大夫士大夫</p>-->
+           <!--<h3>19.9元</h3>-->
+           <!--<span>打算打打啊 大声 </span>-->
+           <!--<i>1</i>-->
+         <!--</li>-->
+       </ul>
+       <div class="more-bar">
+         <a href="">更多优惠信息 >></a>
+       </div>
+     </div>
+    
+    <!--超值的模板-->
+    <script type="text/template" id="tplDis">
+      {{each result}}
+         <li>
+           <a href="moneyproduct.html?productid={{$value.productId}}">{{# $value.productImg2}}</a>
+           <p>{{$value.productName}}</p>
+           <h3>{{$value.productPinkage}}</h3>
+           <span>{{$value.productFrom}} | {{$value.productTime}} </span>
+           <i>{{$value.productComCount}}</i>
+         </li>
+      {{/each}}
+    </script>
+    
+    
+    <!--品牌排行-->
+    <div class="brand">
+        <p>品牌排行</p>
+        <a href=""><img src="images/more.png" alt=""></a>
+    </div>
+    
+    
+    <!--底部部分-->
+    <footer>
+      <div class="user">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a class="gogotop" href="#"><img src="images/top.jpg" alt="">  返回顶部</a>
+      </div>
+      <div class="foot-app">
+        <span>手机APP下载</span>
+        <span>慢慢买手机版</span>
+        <span>--掌上比价平台</span>
+        <a href="#">m.manmanbuy.com</a>
+      </div>
+    </footer>
+    
+  
+    
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

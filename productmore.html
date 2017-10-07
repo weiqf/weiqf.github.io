@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>productmore</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+<header>
+  <div class="logo">
+    <a href="#"><img src="images/header_logo.png" alt=""></a>
+  </div>
+  <div class="downl">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</header>
+
+<!--搜索-->
+
+<form class="search">
+  <input type="button" value="搜索">
+  <input type="search" placeholder="请输入你想比价的商品">
+</form>
+
+<!--面包屑导航-->
+<div class="mdaohang">
+  <ul class="clearfix">
+    <li><a href="index.html">首页 &gt; </a></li>
+  <!--<li><a href="category.html">全部分类 &gt; </a></li>-->
+  <!--<li><a class="pro" href="javascript:;"></a></li>-->
+  </ul>
+  <div class="pro-filt">筛选</div>
+</div>
+
+<!--面包屑导航模板-->
+<script type="text/template" id="tplTtd">
+{{each result}}
+  <li><a href="productlist.html?categoryId={{$value.categoryId}}&pageid=">{{$value.category}} &gt; </a></li>
+{{/each}}
+</script>
+ 
+
+<script type="text/template" id="tplPro2">
+      {{each result}}
+          <li><a class="pro" href="javascript:;">{{$value.productName.split(" ")[0]}}</a></li>
+      {{/each}}
+</script>
+
+
+<!--产品展示-->
+<div class="more-show">
+  <!--<a href="javascript:;"><img src="images/pro-list-2rol-img.jpg" alt=""></a>-->
+  <!--<p>撒阿萨德发大是大非阿士大夫啊哦啊</p>-->
+</div>
+
+
+<script type="text/template" id="tplPro">
+  <div class="more-show">
+    {{each result}}
+      <a href="javascript:;">{{@$value.productImg}}</a>
+      <p>{{$value.productName}}</p>
+    {{/each}}
+  </div>
+</script>
+
+
+<!--比价购买-->
+<div class="more-pay">
+  <div>比价购买</div>
+  <div>产品参数</div>
+  <div>网友评价</div>
+</div>
+<div class="more-from">
+  <!--<div class="more-log"><img src="images/slogo.png" alt=""></div>-->
+  <!--<div>京东商城</div>-->
+  <!--<div class="gopay">去购买</div>-->
+  <!--<div>$123</div>-->
+</div>
+
+
+<!--哪买模板-->
+<script type="text/template" id="tplPro1">
+  <div class="more-from">
+    {{each result}}
+      {{@$value.bjShop}}
+    {{/each}}
+  </div>
+</script>
+
+
+<div class="more-tip">*实际价格以各商城列出的实时售价为准，我们提供的价格可能有数小时 至数日的延迟。</div>
+
+<!--网友评价-->
+<div class="more-title">网友评价</div>
+<ul class="more-say">
+  <!--<li>-->
+    <!--<span>用户名</span>-->
+    <!--<span>时间</span>-->
+    <!--<span>购买至</span>-->
+    <!--<div class="more-text">使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线.</div>-->
+  <!--</li>-->
+</ul>
+
+
+<!--网友评价模板-->
+<script type="text/template" id="tplBb">
+  <ul class="more-say">
+    {{each result}}
+        <li>
+          <span>{{$value.comName}}</span>
+          <span>{{$value.comTime}}</span>
+          <span>{{$value.comFrom}}</span>
+          <div class="more-text">{{$value.comContent}}</div>
+        </li>
+    {{/each}}
+  </ul>
+</script>
+
+
+<!--更多评价-->
+<div class="more-bb">查看更多评价</div>
+
+
+<!--底部部分-->
+<footer>
+  <div class="user">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#"><img src="images/top.jpg" alt="">  返回顶部</a>
+  </div>
+  <div class="foot-app">
+    <span>手机APP下载</span>
+    <span>慢慢买手机版</span>
+    <span>--掌上比价平台</span>
+    <a href="#">m.manmanbuy.com</a>
+  </div>
+</footer>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/productmore.js"></script>
+</body>
+</html>

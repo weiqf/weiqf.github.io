@@ -1,0 +1,174 @@
+@charset "UTF-8";
+#header {
+  background-color: #ff841d;
+  height: 2.5rem;
+  width: 100%;
+  line-height: 2.5rem;
+  overflow: hidden;
+}
+#header .headerlogo {
+  float: left;
+  width: 75%;
+  height: 2.5rem;
+  margin-left: 0.825rem;
+  line-height: 2.5rem;
+}
+#header .headerlogo a {
+  float: left;
+  font-size: 30px;
+  color: white;
+}
+#header .headerlogo span {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: white;
+}
+#header .download {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.35rem;
+  float: right;
+  padding-top: 0.4rem;
+}
+#header .download a > img {
+  vertical-align: middle;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+#footer {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-bottom: 1px solid #c2c2c2;
+  border-top: 1px solid #c2c2c2;
+  margin-top: 1.5rem;
+}
+#footer .footerTop {
+  height: 1.5rem;
+}
+#footer .footerTop a {
+  display: block;
+  float: left;
+  text-align: center;
+  color: #000005;
+  font-size: 0.7rem;
+}
+#footer .footerTop .dl {
+  width: 30%;
+}
+#footer .footerTop .zc {
+  border-left: 1px solid #c2c2c2;
+  border-right: 1px solid #c2c2c2;
+  box-sizing: border-box;
+  width: 30%;
+}
+#footer .footerTop .fh {
+  width: 40%;
+}
+#footer .footerBottom {
+  height: 3.1rem;
+  margin-top: 0.8rem;
+}
+#footer .footerBottom .top {
+  text-align: center;
+  font-size: 0.65rem;
+}
+#footer .footerBottom .top .spn1 a {
+  color: #ff0002;
+}
+#footer .footerBottom .top .spn2 a {
+  color: #000005;
+}
+#footer .footerBottom .top .spn3 {
+  color: #70655f;
+}
+#footer .footerBottom .bottom {
+  text-align: center;
+  color: #70655f;
+  font-size: 0.55rem;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.active {
+  background-color: red;
+}
+.nav .nav-l {
+  border-bottom: 1px solid #c2c2c2;
+}
+.nav .nav-l li {
+  float: left;
+  width: 33%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  border-right: 1px solid #c2c2c2;
+}
+.nav .content div {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+}
+.nav .content li {
+  line-height: 35px;
+  display: block;
+  height: 35px;
+  padding-left: 10px;
+  border-bottom: 1px solid #c2c2c2;
+}
+.main .content-list ul {
+  padding: 10px;
+}
+.main .content-list ul li {
+  margin-bottom: 10px;
+  float: left;
+  width: 50%;
+}
+.main .content-list ul li a {
+  display: block;
+  margin-left: 5px;
+  background-color: white;
+}
+.main .content-list ul li .pic {
+  width: 100%;
+  text-align: center;
+}
+.main .content-list ul li .pic img {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+.main .content-list ul li .text {
+  padding-left: 10px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.main .content-list ul li .other {
+  margin-bottom: 10px;
+}
+.main .content-list ul li .other .price {
+  text-indent: 10px;
+  float: left;
+  color: red;
+  font-size: 16px;
+  line-height: 30px;
+}
+.main .content-list ul li .other .btn {
+  color: #fff;
+  float: right;
+  width: 50px;
+  height: 30px;
+  background-color: #f4483e;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+}

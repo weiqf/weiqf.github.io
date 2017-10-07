@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>sitenav</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+<header>
+  <div class="arrow">
+    <a href="index.html"><</a>
+  </div>
+  <p>商城导航</p>
+  <div class="downl">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</header>
+
+<!--图标-->
+<div class="st-tb">
+  <ul class="st-tbul">
+    <!--<li>-->
+      <!--<a href="">-->
+        <!--<img src="images/slogo.png" alt="">-->
+      <!--</a>-->
+      <!--<p>京东商城</p>-->
+    <!--</li>-->
+  </ul>
+</div>
+
+
+<!--图标模板-->
+<script type="text/template" id="tplStt">
+  {{each result}}
+      <li>
+        <a href="{{$value.navHref}}">
+          <img src="{{$value.navImg}}" alt="">
+        </a>
+        <p>{{$value.navTitle}}</p>
+      </li>
+  {{/each}}
+</script>
+
+<!--底部部分-->
+<footer>
+  <div class="user">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#"><img src="images/top.jpg" alt="">  返回顶部</a>
+  </div>
+  <div class="foot-app">
+    <span>手机APP下载</span>
+    <span>慢慢买手机版</span>
+    <span>--掌上比价平台</span>
+    <a href="#">m.manmanbuy.com</a>
+  </div>
+</footer>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/sitenav.js"></script>
+</body>
+</html>

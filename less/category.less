@@ -1,0 +1,45 @@
+@import url(base.less);
+@import url(adapter.less);
+
+.bj-type{
+  border: 1px solid #aaa;
+  border-radius: 5/50rem;
+   .bj-title{
+     display: block;
+     width: 100%;
+     height:80/50rem;
+     background-color: #ededed;
+     position: relative;
+     border-bottom: 1px solid #aaa;
+     p{
+       font-size: 33/50rem;
+       .center-y();
+       left:35/50rem;
+     }
+     a{
+        img{
+          width:40/50rem;
+          height:40/50rem;
+          .center-y();
+          right:35/50rem;
+        }
+     }
+   }
+  .bj-info{
+    .clearfix();
+      //ul{
+      //  .clearfix();
+        //.fl();
+        li{
+          width:33.33%;
+          height:78/50rem;
+          .fl();
+          border:1px solid #aaa;
+          box-sizing: border-box;
+          text-align: center;
+          line-height:78/50rem;
+          font-size: 26/50rem;
+        }
+      //}
+  }
+}

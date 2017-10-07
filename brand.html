@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>brand</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+<header>
+  <div class="logo">
+    <a href="#"><img src="images/header_logo.png" alt=""></a>
+  </div>
+  <div class="downl">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</header>
+
+<!--搜索-->
+
+<form class="search">
+  <input type="button" value="搜索">
+  <input type="search" placeholder="请输入你想比价的商品">
+</form>
+
+<div class="bj-type brandBox">
+  <h3>平板电视哪个牌子好</h3>
+  <ul class="category-title">
+    <!--<li>-->
+      <!--<a href="">-->
+        <!--格力冷暖空调-->
+        <!--<em class="top1"></em>-->
+        <!--<div class="inner">-->
+          <!--<div class="tit"></div>-->
+          <!--<p></p>-->
+        <!--</div>-->
+      <!--</a>-->
+    <!--</li>-->
+  </ul>
+</div>
+
+<!--排行导航模板-->
+<script type="text/template" id="tplBrt">
+  
+  {{each result as v i}}
+  <li><a href="productlist.html?categoryid={{v.categoryId}}&pageid=1" title="{{v.brandName}}">
+    <em class="top{{i+1}}">{{i+1}}</em>
+    <div class="inner">
+      <div class="tit">{{v.brandName}}</div>
+      <p>{{v.brandInfo}}</p></div>
+  </a></li>
+  {{/each}}
+
+</script>
+
+<!--电视排行-->
+<div class="bj-type brandBox product-list">
+  <h3>平板电视产品销量排行</h3>
+  <ul class="dsph">
+    
+    
+  </ul>
+</div>
+
+<!--电视模板-->
+<script type="text/template" id="tplBrts">
+  
+  {{each result as v i}}
+  <li>
+    <a href="productmore.html?productid={{v.productListId}}&categoryid={{v.categoryId}}" title="{{v.productName}}">
+      <div class="pic">{{# v.productImg}}</div>
+      <div class="info">
+        <div class="tit">{{v.productName}}</div>
+        <div class="price"><em>{{v.productPrice}}</em> <span class="star"><em class="star5"></em></span></div>
+        <div class="other"><em>{{v.productQuote}}</em><em>{{v.productCom}}</em></div>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+
+</script>
+
+
+
+<!--评论-->
+<div class="bj-type brandBox product-list new-commet">
+  <h3>平板电视产品销量排行</h3>
+  <ul class="dspl">
+  
+  
+  </ul>
+</div>
+<!--评论模板-->
+<script type="text/template" id="tplBrtsl">
+  
+  {{each result as v i}}
+  <li>
+    <a href="javascript:;">
+      <div class="protit clearfix">
+        <div class="pic">{{# v.productImg}}</div>
+        <div class="tit">{{v.productName}}</div>
+      </div>
+      <div class="plbox">
+        <div class="name">{{v.comName}}<span class="star"><em class="star5"></em></span><i>{{v.comTime}}</i></div>
+        <div class="con">{{v.comContent}} 评论发布自 {{v.comFrom}}</div>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+  
+</script>
+
+
+<!--底部部分-->
+<footer>
+  <div class="user">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a class="gogotop" href="#"><img src="images/top.jpg" alt="">  返回顶部</a>
+  </div>
+  <div class="foot-app">
+    <span>手机APP下载</span>
+    <span>慢慢买手机版</span>
+    <span>--掌上比价平台</span>
+    <a href="#">m.manmanbuy.com</a>
+  </div>
+</footer>
+
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/brand.js"></script>
+</body>
+</html>

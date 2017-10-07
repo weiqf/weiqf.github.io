@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>productlist</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+<header>
+  <div class="logo">
+    <a href="#"><img src="images/header_logo.png" alt=""></a>
+  </div>
+  <div class="downl">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</header>
+
+<!--搜索-->
+
+<form class="search">
+  <input type="button" value="搜索">
+  <input type="search" placeholder="请输入你想比价的商品">
+</form>
+
+<!--面包屑导航-->
+<div class="mdaohang">
+  <!--<ul class="clearfix">-->
+    <!--<li><a href="index.html">首页 &gt; </a></li>-->
+    <!--<li><a href="category.html">全部分类 &gt; </a></li>-->
+    <!--<li><a class="pro" href="javascript:;"></a></li>-->
+  <!--</ul>-->
+  <!--<div class="pro-filt">筛选</div>-->
+</div>
+
+
+<!--面包屑导航模板-->
+<script type="text/template" id="tplMdh">
+  {{each result}}
+    <ul class="clearfix">
+      <li><a href="index.html">首页 &gt; </a></li>
+      <li><a href="category.html">全部分类 &gt; </a></li>
+      <li><a class="pro" href="javascript:;" id="{{$value.categoryId}}">{{$value.category}}</a></li>
+    </ul>
+    <div class="pro-filt">筛选</div>
+  {{/each}}
+</script>
+
+
+
+<!--产品列表-->
+<ul class="pro-recom">
+  <!--<li>-->
+  <!--<a href=""><img src="images/categorylist.jpg" alt=""></a>-->
+  <!--<p>士大夫阿萨德发送打法大大声打法阿士大夫士大夫</p>-->
+  <!--<h3>19.9元</h3>-->
+  <!--<span>打算打打啊 大声 </span>-->
+  <!--</li>-->
+</ul>
+
+<!--产品列表导航-->
+<script type="text/template" id="tplList">
+  {{each result}}
+    <li class="{{$value.productId}}">
+      <a href="productmore.html?productId={{$value.productId}}&categoryId={{$value.categoryId}}">{{@$value.productImg}}</a>
+      <p>{{$value.productName}}</p>
+      <h3>{{$value.productPrice}}</h3>
+      <span>{{$value.productQuote}}</span>
+      <i>{{$value.productCom}}</i>
+    </li>
+  {{/each}}
+</script>
+
+
+
+<!--上一页下一页-->
+<div class="pro-pages">
+  <div class="items prev"><a>上一页</a></div>
+  <div class="items">
+    <select></select>
+  </div>
+  <div class="items next"><a>下一页</a></div>
+</div>
+
+
+
+
+
+
+
+<!--底部部分-->
+<footer>
+  <div class="user">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#"><img src="images/top.jpg" alt="">  返回顶部</a>
+  </div>
+  <div class="foot-app">
+    <span>手机APP下载</span>
+    <span>慢慢买手机版</span>
+    <span>--掌上比价平台</span>
+    <a href="#">m.manmanbuy.com</a>
+  </div>
+</footer>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/productlist.js"></script>
+</body>
+</html>

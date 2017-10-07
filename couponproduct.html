@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>couponproduct</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+<header>
+  <div class="bgc">
+    <div class="arrow">
+      <a href="coupon.html"><</a>
+    </div>
+    <p>优惠券</p>
+    <div class="downl">
+      <a href="#"><img src="images/header_app.png" alt=""></a>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+<div class="cppt-tip">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+
+
+
+<!--产品列表-->
+<div class="cpp-list">
+  <div class="dis">
+    <ul class="recom">
+      <!--<li>-->
+        <!--<a href=""><img src="images/product.jpg" alt=""></a>-->
+        <!--<p>士大夫阿萨德发送打法大大声打法阿士大夫士大夫</p>-->
+        <!--<h3 style="color: #000">19.9元</h3>-->
+        <!--<span style="color: #f4483e">打算打打啊</span>-->
+      <!--</li>-->
+    </ul>
+  </div>
+</div>
+
+<!--列表模板-->
+<script type="text/template" id="tplCpt">
+  {{each result}}
+      <li>
+        <a href="">{{@$value.couponProductImg}}</a>
+        <p>{{$value.couponProductName}}</p>
+        <h3 style="color: #000">{{$value.couponProductPrice}}</h3>
+        <span style="color: #f4483e">{{$value.couponProductTime}}</span>
+      </li>
+  {{/each}}
+</script>
+
+
+
+<!--底部部分-->
+<footer>
+  <div class="user">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#"><img src="images/top.jpg" alt="">  返回顶部</a>
+  </div>
+  <div class="foot-app">
+    <span>手机APP下载</span>
+    <span>慢慢买手机版</span>
+    <span>--掌上比价平台</span>
+    <a href="#">m.manmanbuy.com</a>
+  </div>
+</footer>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/couponproduct.js"></script>
+
+</body>
+</html>

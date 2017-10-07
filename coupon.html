@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>coupon</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+<header>
+   <div class="bgc">
+     <div class="arrow">
+       <a href="index.html"><</a>
+     </div>
+     <p>优惠券</p>
+     <div class="downl">
+       <a href="#"><img src="images/header_app.png" alt=""></a>
+     </div>
+   </div>
+</header>
+
+<!--优惠券-->
+<div class="cp-stro">
+  <ul class="cp-stroul">
+    <!--<li>-->
+      <!--<a href="">-->
+        <!--<img src="images/product.jpg" alt="">-->
+        <!--<p>肯德基</p>-->
+      <!--</a>-->
+    <!--</li>-->
+  </ul>
+</div>
+
+<!--优惠券模板-->
+<script type="text/template" id="tplCp">
+  {{each result}}
+    <li>
+      <a href="couponproduct.html?couponId={{$value.couponId}}&couponTitle={{$value.couponTitle}}">
+        <img src="{{$value.couponImg}}" alt="">
+        <p>{{$value.couponTitle}}</p>
+      </a>
+    </li>
+  {{/each}}
+</script>
+
+<!--底部部分-->
+<footer>
+  <div class="user">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#"><img src="images/top.jpg" alt="">  返回顶部</a>
+  </div>
+  <div class="foot-app">
+    <span>手机APP下载</span>
+    <span>慢慢买手机版</span>
+    <span>--掌上比价平台</span>
+    <a href="#">m.manmanbuy.com</a>
+  </div>
+</footer>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/coupon.js"></script>
+</body>
+</html>

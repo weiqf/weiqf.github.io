@@ -1,0 +1,115 @@
+@import url(base.less);
+@import url(adapter.less);
+
+.il-dis{
+
+  .cd-disul{
+    li{
+      height: 12rem;
+      span{
+        display: block;
+        width:120/50rem;
+        height:50/50rem;
+        margin-left: 4.5rem;
+        background-color: #ff841d;
+        border-radius: 10/50rem;
+        color: #fff;
+        text-align: center;
+        line-height:50/50rem;
+        font-size: 25/50rem;
+      }
+    }
+
+  }
+}
+
+.bcj-nav{
+  position: relative;
+  overflow: visible;
+  .title{
+    .clearfix();
+
+    li{
+      width:29%;
+      .fl();
+      text-align: center;
+      line-height: 1.52rem;
+      font-size: 30/50rem;
+    }
+  }
+}
+
+.popsort{
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0px;
+  top: 1.52rem;
+  display: none;
+  ul{
+    //.clearfix();
+  }
+  li{
+    width: 100%;
+    border: 1px solid #dadada;
+    //position: relative;
+    background-color: #fff;
+    float: left;
+    display: block;
+    height:1.5rem;
+
+    a{
+      display: block;
+      font-size: 25/50rem;
+      line-height:1.5rem;
+      margin-left: 30/50rem;
+    }
+
+  }
+  .on{
+    //content: "";
+    //display: block;
+    //width: 0.8rem;
+    //height: 0.8rem;
+    //position: absolute;
+    //right: 0.6rem;
+    //top: 50%;
+    //margin-top: -0.4rem;
+    background-color: #ff841d;
+    //background-size: 0.96rem;
+  }
+}
+
+
+.bcj-nav .popbox {
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0px;
+  top: 1.52rem;
+  box-shadow: 0px 0.12rem 0.24rem #dddddd;
+  display: none;
+}
+.bcj-nav .popbox li {
+  width: 100%;
+  border-bottom: 1px solid #dadada;
+  position: relative;
+  background-color: #fff;
+}
+.bcj-nav .popbox li.on::after {
+  content: "";
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  margin-top: -0.4rem;
+  background: url(../images/on.png) no-repeat right center;
+  background-size: 0.96rem;
+}
+.bcj-nav .popbox li a {
+  display: block;
+  line-height: 1.6rem;
+  padding: 0 0.4rem;
+}

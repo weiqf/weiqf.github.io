@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>inlandproduct</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+<header>
+  <div class="arrow">
+    <a href="inlanddiscount.html"><</a>
+  </div>
+  <p>国内折扣</p>
+  <div class="downl">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</header>
+
+<!--标题-->
+<div class="mp-title">
+  <!--<h3>移动端凑单品：海天 鲜味 生抽 1.28L</h3>-->
+  <!--<p>10.9元</p>-->
+  <!--<span>京东商城</span>-->
+  <!--<span>日期</span>-->
+  <!--<span>名字</span>-->
+  <!--<span>评论</span>-->
+</div>
+
+<!--标题模板-->
+<script type="text/template" id="tlpTti">
+  {{each result}}
+  <h3>{{$value.productName}}</h3>
+  <p>{{$value.productPinkage}}</p>
+  <span>{{$value.productFrom}}</span>
+  <span>{{$value.productTime}}</span>
+  <span>{{$value.productTips}}</span>
+  <span>{{$value.productComCount}}</span>
+  {{/each}}
+</script>
+
+<!--详情-->
+<div class="mp-xq">
+  <!--<div class="mp-pic"><img src="images/product.jpg" alt=""></div>-->
+  <!--<div class="mp-text">海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。</div>-->
+  <!--<div class="mp-big"><img src="images/product.jpg" alt=""></div>-->
+</div>
+
+
+<!--详情模板-->
+<script type="text/template" id="tlpTxq">
+  {{each result}}
+  <div class="mp-pic">{{@$value.productImg}}</div>
+  <div class="mp-text">{{$value.productInfo}}</div>
+  <div class="mp-big">{{@$value.productImg}}</div>
+  {{/each}}
+</script>
+
+
+<!--城市-->
+<div class="mp-city">
+  <!--<ul>-->
+  <!--<li>-->
+  <!--<a href="javascript:;">北京</a>-->
+  <!--</li>-->
+  <!--</ul>-->
+</div>
+
+<!--城市模板-->
+<!--<script type="text/template" id="tlpTct">-->
+  <!--{{each result}}-->
+  <!--{{@$value.productCity}}-->
+  <!--{{/each}}-->
+<!--</script>-->
+
+
+<!--前往购买-->
+<div class="mp-go">
+  <a href="javascript:;">前往购买</a>
+</div>
+
+
+<!--二维码-->
+<div class="mp-er">
+  <img src="images/mmbweixin2.png" alt="">
+</div>
+
+<!--评论-->
+<div class="mp-pl">
+
+</div>
+
+
+<!--评论模板-->
+<script type="text/template" id="tlpTpl">
+  {{each result}}
+  {{@$value.productComment}}
+  {{/each}}
+</script>
+
+
+<!--底部部分-->
+<footer>
+  <div class="user">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#"><img src="images/top.jpg" alt="">  返回顶部</a>
+  </div>
+  <div class="foot-app">
+    <span>手机APP下载</span>
+    <span>慢慢买手机版</span>
+    <span>--掌上比价平台</span>
+    <a href="#">m.manmanbuy.com</a>
+  </div>
+</footer>
+
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/inlandproduct.js"></script>
+</body>
+</html>

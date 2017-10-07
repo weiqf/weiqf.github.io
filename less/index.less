@@ -1,0 +1,236 @@
+@import url(base.less);
+@import url(adapter.less);
+@import url(category.less);
+@import url(productlist.less);
+@import url(productmore.less);
+@import url(moneyctrl.less);
+@import url(moneyproduct.less);
+@import url(inlanddiscount.less);
+@import url(coupon.less);
+@import url(couponproduct.less);
+@import url(sitenav.less);
+@import url(baicaijia.less);
+@import url(gsproduct.less);
+@import url(brandTitle.less);
+@import url(brand.less);
+@color:#ff841d;
+header{
+  width: 100%;
+  height:100/50rem;
+  background-color: #ff841d;
+  position: relative;
+  .clearfix();
+  .logo{
+    width:372/50rem;
+    height:48/50rem;
+    .center-y();
+    margin-left: 35/50rem;
+  }
+  .downl{
+    width:70/50rem;
+    height:70/50rem;
+    right: 15/50rem;
+    .center-y();
+  }
+}
+
+.search{
+  width: 100%;
+  height:102/50rem;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 20/50rem;
+  .clearfix();
+    [type="button"]{
+      width:125/50rem;
+      height: 60/50rem;
+      background-color: @color;
+      .center-y();
+      right:20/50rem;
+      font-size: 30/50rem;
+      color: #fff;
+      border-radius: 30/50rem;
+      float: right;
+  }
+  [type="search"]{
+    width:570/50rem;
+    height: 60/50rem;
+    background-color: #f1f1f1;
+    .center-y();
+    left:20/50rem;
+    font-size: 30/50rem;
+    color: #000;
+    border-radius: 25/50rem;
+    margin-right: 160/50rem;
+    text-indent: 40/50rem;
+  }
+}
+
+nav{
+  ul{
+    .clearfix();
+
+    li{
+      .fl();
+      width:25%;
+      padding: 43/50rem;
+      box-sizing: border-box;
+      p{
+        font-size: 24/50rem;
+        text-align: center;
+      }
+      &.show:nth-of-type(n + 9){
+        display: block;
+      }
+      &:nth-of-type(n + 9){
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+.dis{
+  .dis-header {
+    width: 100%;
+    height:70/50rem;
+    background-color: @color;
+    position: relative;
+    margin-top: 10/50rem;
+    p{
+      font-size: 32/50rem;
+      color: #fff;
+      .center-y();
+      left:20/50rem;
+    }
+    a{
+      width:40/50rem;
+      height:40/50rem;
+      .center-y();
+      right:20/50rem;
+    }
+  }
+  .recom{
+    background-color: #fff;
+    li{
+      position: relative;
+      .clearfix();
+
+      border-bottom: 1px solid #ccc;
+    }
+    a{
+      .fl();
+      img {
+        width:230/50rem;
+        height:257/50rem;
+        padding: 0.3rem;
+      }
+    }
+    p{
+      font-size: 30/50rem;
+      margin-top: 30/50rem;
+    }
+    h3{
+      font-size: 25/50rem;
+      color: orange;
+    }
+    span{
+      //display: block;
+      font-size: 25/50rem;
+      color: #aaa;
+      position: absolute;
+      bottom: 10/50rem;
+    }
+    i{
+      color: #aaa;
+      position: absolute;
+      right: 10/50rem;
+      bottom: 10/50rem;
+    }
+  }
+  .more-bar{
+    width:710/50rem;
+    height:63/50rem;
+    border:1px solid #ccc;
+    border-radius: 10/50rem;
+    margin: 20/50rem auto;
+    text-align: center;
+    a{
+      line-height:63/50rem;
+      font-size: 25/50rem;
+    }
+  }
+}
+
+
+.brand {
+  width: 100%;
+  height:70/50rem;
+  background-color: @color;
+  position: relative;
+  margin-top: 10/50rem;
+  p{
+    font-size: 32/50rem;
+    color: #fff;
+    .center-y();
+    left:20/50rem;
+  }
+  a{
+    width:40/50rem;
+    height:40/50rem;
+    .center-y();
+    right:20/50rem;
+  }
+}
+
+footer{
+  .user{
+    .clearfix();
+    width: 100%;
+    height:65/50rem;
+    margin-top: 1rem;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    a{
+      .fl();
+      display: block;
+      width:33%;
+      font-size: 30/50rem;
+      line-height:65/50rem;
+      text-align: center;
+      position: relative;
+      img {
+        width:30/50rem;
+        height:30/50rem;
+        .center-y;
+        left:40/50rem;
+      }
+      &:nth-child(2){
+        border: 1px solid #ccc;
+        border-top: none;
+        border-bottom: none;
+      }
+    }
+  }
+  .foot-app{
+    text-align: center;
+    margin-top: 10/50rem;
+    span {
+      font-size: 20/50rem;
+      line-height:60/50rem;
+      &:nth-child(1){
+        color: red;
+      }
+      &:nth-child(3){
+        color: #aaa;
+      }
+    }
+    a{
+      display: block;
+    }
+  }
+}
+
+
+

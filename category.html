@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>category</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+  <header>
+    <div class="logo">
+      <a href="#"><img src="images/header_logo.png" alt=""></a>
+    </div>
+    <div class="downl">
+      <a href="#"><img src="images/header_app.png" alt=""></a>
+    </div>
+  </header>
+
+<!--搜索-->
+
+<form class="search">
+  <input type="button" value="搜索">
+  <input type="search" placeholder="请输入你想比价的商品">
+</form>
+
+<!--比价分类-->
+<ul class="bj-type">
+  <!--<li class="bj-sort">-->
+    <!--<div class="bj-title">-->
+      <!--<p>大家电</p>-->
+      <!--<a href="javascript:;"><img src="images/arrow.png" alt=""></a>-->
+    <!--</div>-->
+    <!--<div class="bj-info">-->
+        <!--<li><a href="">电视</a></li>-->
+        <!--<li><a href="">电视</a></li>-->
+        <!--<li><a href="">电视</a></li>-->
+        <!--<li><a href="">电视</a></li>-->
+    <!--</div>-->
+  <!--</li>-->
+</ul>
+
+
+<!--比价分类模板-->
+<script type="text/template" id="tplTitle">
+  {{each result}}
+  <li class="bj-sort">
+    <div class="bj-title" id="{{$value.titleId}}">
+      <p>{{$value.title}}</p>
+      <a href="javascript:;"><img src="images/arrow.png" alt=""></a>
+    </div>
+    <div class="bj-info">
+      <!--<ul>-->
+        <!--<li><a href="">电视</a></li>-->
+        <!--<li><a href="">电视</a></li>-->
+        <!--<li><a href="">电视</a></li>-->
+        <!--<li><a href="">电视</a></li>-->
+      <!--</ul>-->
+    </div>
+  </li>
+{{/each}}
+</script>
+
+<script type="text/template" id="tplInfo">
+ 
+  {{each result}}
+  <!--<div class="bj-info">-->
+    <!--<ul>-->
+    <li class="fl" id="{{$value.categoryId}}"><a href="productlist.html?categoryId={{$value.categoryId}}&pageid=">{{$value.category}}</a></li>
+    <!--</ul>-->
+  <!--</div>-->
+  {{/each}}
+</script>
+
+
+
+
+<!--底部部分-->
+<footer>
+  <div class="user">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#"><img src="images/top.jpg" alt="">  返回顶部</a>
+  </div>
+  <div class="foot-app">
+    <span>手机APP下载</span>
+    <span>慢慢买手机版</span>
+    <span>--掌上比价平台</span>
+    <a href="#">m.manmanbuy.com</a>
+  </div>
+</footer>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/art-template.js"></script>
+<script src="js/category.js"></script>
+</body>
+</html>

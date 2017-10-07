@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Title</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+
+</head>
+<body>
+<!--头部样式-->
+<header id="header" class="header clearfix">
+  <div class="headerlogo clearfix">
+    <a href="index.html">
+      <
+    </a>
+            <span>
+                凑单品
+            </span>
+  </div>
+  <div class="download">
+    <a href="javascript:;">
+      <img src="images/header_app.png" alt="">
+    </a>
+  </div>
+</header>
+
+<div class="nav">
+  <ul class="nav-l clearfix">
+    <li>京东 ^</li>
+    <li>华北 ^</li>
+    <li>全部价格 ^</li>
+  </ul>
+  <div class="content">
+    <div class="shop hide">
+      <ul>
+
+      </ul>
+    </div>
+    <div class="area hide">
+      <ul>
+
+      </ul>
+    </div>
+    <div class="price hide">
+      <ul>
+        <li class="active">
+          全部价格
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<main class ="main ">
+  <div class="content-list">
+    <ul class="clearfix">
+
+    </ul>
+  </div>
+</main>
+
+
+
+
+
+
+<!--模版引擎-->
+<script id="tpl1" type="text/template">
+  {{each result v i}}
+  <li data-shop-id="{{v.shopId}}">
+    {{v.shopName}}
+  </li>
+  {{/each}}
+</script>
+<script id="tpl2" type="text/template">
+  {{each result v i}}
+  <li data-area-id="{{v.areaId}}">
+    {{v.areaName}}
+  </li>
+  {{/each}}
+</script>
+
+<script id="tpl3" type="text/template">
+  {{each result v i}}
+  <li>
+    <a href="#">
+      <div class="pic">
+        <img src="{{v.productImg}}" alt="">
+      </div>
+      <div class="text">
+        {{v.productName}}
+      </div>
+      <div class="other clearfix">
+        <div class="price">{{v.productPrice}}</div>
+        <div class="btn">去凑单</div>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+<script src="js/rem.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/template-web.js"></script>
+<script src="js/gsproduct.js"></script>
+</body>
+</html>
